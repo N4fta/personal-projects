@@ -1,0 +1,6 @@
+# Attempts at making the game an executable
+build
+dist
+
+# Venv
+.venv
