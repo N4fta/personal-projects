@@ -1,0 +1,10 @@
+# Find all git repos by looking for '.git' files
+# https://stackoverflow.com/questions/2020812/how-can-i-view-all-the-git-repositories-on-my-machine
+
+# Powershell:
+Get-ChildItem . -Attributes Directory+Hidden -ErrorAction SilentlyContinue -Filter ".git" -Recurse
+Get-ChildItem . -Attributes Directory+Hidden -ErrorAction SilentlyContinue -Filter ".git" -Recurse | % { Write-Host $_.FullName }
+
+# Bash
+find / -name ".git"
+
